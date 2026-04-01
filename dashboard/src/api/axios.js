@@ -6,7 +6,7 @@ export const API_BASE_URL = configuredApiUrl
   ? configuredApiUrl.replace(/\/+$/, "")
   : process.env.NODE_ENV === "production"
     ? ""
-    : "http://localhost:3002";
+    : "http://localhost:3001";
 
 const api = axios.create({
   baseURL: API_BASE_URL || undefined,

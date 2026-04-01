@@ -5,7 +5,7 @@ const configuredApiUrl = process.env.REACT_APP_API_URL?.trim();
 export const API_BASE_URL = configuredApiUrl
   ? configuredApiUrl.replace(/\/+$/, "")
   : process.env.NODE_ENV === "production"
-    ? ""
+    ? "https://stock-sphere-mauve.vercel.app"
     : "http://localhost:3002";
 
 const api = axios.create({
